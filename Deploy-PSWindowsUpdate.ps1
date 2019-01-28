@@ -122,7 +122,7 @@ function UpdateWindows {
 UpdateWindows | Receive-Job -Wait -AutoRemoveJob
 
 #Removes schedule task from computer
-Invoke-Command -ComputerName $Computer -ScriptBlock {
+Invoke-Command -ComputerName $Computername -ScriptBlock {
 
     Unregister-ScheduledTask -TaskName PSWindowsUpdate -Confirm:$false
 }
